@@ -1,16 +1,10 @@
-# Versión de la sintaxis de Docker Compose
 version: '3.8'
 
-# Definición de los servicios (contenedores)
 services:
-  # Nombra tu servicio como quieras
-  portfolio-web:
-    # "build: ." le dice a Compose que busque un Dockerfile
-    # en el directorio actual ('.') y lo construya.
+  portafolio:
     build: .
-    
-    # Mapea el puerto de tu máquina (HOST) al puerto del contenedor (CONTAINER)
-    # "8080:80" significa:
-    # El puerto 8080 de tu PC (Host) se conectará al puerto 80 de Nginx (Contenedor).
+    container_name: portafolio-web
     ports:
+      # Mapea el puerto 8080 de tu PC al puerto 80 del contenedor Nginx
       - "8080:80"
+    restart: unless-stopped

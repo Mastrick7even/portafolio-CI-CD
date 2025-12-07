@@ -1,0 +1,18 @@
+# Git
+.git
+.gitignore
+.github
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+README.md
+readme.txt
+
+# Development files
+.vscode
+.idea
+*.log
