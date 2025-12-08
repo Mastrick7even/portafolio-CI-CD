@@ -1,71 +1,87 @@
-# Portafolio CI/CD
+# 💼 Portafolio Personal - Bastián Arriagada Quero
 
-Repositorio de portafolio personal con integración continua y despliegue automatizado.
+Portafolio web desarrollado con HTML5, CSS3 y JavaScript, implementando un pipeline de CI/CD con GitHub Actions y Docker para despliegue automatizado en GitHub Pages.
+
+## 🚀 Tecnologías Utilizadas
+
+- **Frontend**: HTML5, CSS3 (SCSS), JavaScript
+- **DevOps**: Docker, GitHub Actions
+- **Deployment**: GitHub Pages
+- **Control de versiones**: Git
+
+## ✨ Características
+
+- 🎨 Diseño responsive y minimalista
+- 🔄 Animaciones suaves y transiciones
+- 📊 Sección de habilidades técnicas con visualización de progreso
+- 💼 Portafolio de proyectos con enlaces a repositorios
+- 📧 Formulario de contacto
+- 📄 CV descargable en PDF
 
 ## 📂 Estructura del Proyecto
 
 ```
 portafolio-CI-CD/
-├── Augustine_1_0_0/          # Proyecto principal de portafolio
-│   ├── .github/
-│   │   └── workflows/
-│   │       └── deploy.yml    # GitHub Actions workflow
-│   ├── css/                  # Estilos
-│   ├── js/                   # Scripts
-│   ├── images/               # Imágenes y assets
-│   ├── Dockerfile           # Configuración Docker
-│   ├── docker-compose.yml   # Docker Compose
-│   ├── index.html           # Página principal
-│   └── README.md            # Documentación del proyecto
-└── assets/                   # Assets adicionales del repositorio
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # Pipeline CI/CD
+├── assets/
+│   └── CV-Bastian Arriagada Quero.pdf
+├── css/
+│   ├── vendor.css              # Estilos de librerías
+│   └── styles.css              # Estilos principales
+├── images/
+│   ├── portfolio/              # Imágenes de proyectos
+│   └── fotoPresentacion.jpg    # Imagen de portada
+├── js/
+│   ├── plugins.js              # Plugins JavaScript
+│   └── main.js                 # Lógica principal
+├── index.html                  # Página principal
+├── docker-compose.yml          # Configuración Docker
+└── Dockerfile                  # Imagen Docker
 ```
 
-## 🚀 Proyecto Principal: Augustine 1.0.0
+## 🛠️ Instalación y Ejecución
 
-El portafolio principal está ubicado en la carpeta **`Augustine_1_0_0/`**.
+### Opción 1: Ejecución Local Simple
 
-Para trabajar con el proyecto, navega a esa carpeta:
+Simplemente abre el archivo `index.html` en tu navegador.
 
-```bash
-cd Augustine_1_0_0
-```
-
-Consulta el [README del proyecto Augustine](./Augustine_1_0_0/README.md) para instrucciones detalladas sobre:
-- Desarrollo local
-- Uso de Docker y Docker Compose  
-- Despliegue a GitHub Pages
-- Personalización del portafolio
-
-## 🛠️ Características
-
-- ✅ **Proyecto unificado** con toda su configuración en una carpeta
-- ✅ **Docker** y **Docker Compose** para desarrollo local
-- ✅ **GitHub Actions** para CI/CD automatizado
-- ✅ **Despliegue automático** a GitHub Pages
-- ✅ **Diseño responsivo** y moderno
-
-## 📝 Inicio Rápido
-
-### Opción 1: Desarrollo Local Simple
+### Opción 2: Con Docker
 
 ```bash
-cd Augustine_1_0_0
-start index.html  # Windows
-```
-
-### Opción 2: Usando Docker
-
-```bash
-cd Augustine_1_0_0
+# Construir y ejecutar con Docker Compose
 docker-compose up --build
+
+# El sitio estará disponible en http://localhost:8080
 ```
 
-Luego abre tu navegador en `http://localhost:8080`
+## 🚀 Despliegue
 
-## 🌐 Despliegue
+El proyecto utiliza GitHub Actions para despliegue automatizado:
 
-El proyecto se despliega automáticamente a GitHub Pages cuando se hace push a la rama `main`.
+1. **Push a `main`** → Trigger automático del workflow
+2. **Build** → Construcción de assets
+3. **Deploy** → Publicación en GitHub Pages
+
+El sitio está desplegado en: `https://mastrick7even.github.io/portafolio-CI-CD/`
+
+## 🔄 CI/CD Pipeline
+
+El proyecto implementa un pipeline completo de integración y despliegue continuo:
+
+```yaml
+Build → Test → Deploy to GitHub Pages
+```
+
+**Características del Pipeline:**
+- ✅ Build automático en cada push
+- ✅ Despliegue automático a GitHub Pages
+- ✅ Versionado automático
+- ✅ Rollback disponible
 
 ---
 
-**Desarrollado para el curso de Taller de Desarrollo - UBB**
+**Hecho con ❤️ por Bastián Arriagada Quero**
+
+*Última actualización: Diciembre 2025*
